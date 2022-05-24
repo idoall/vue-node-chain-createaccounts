@@ -24,6 +24,12 @@ module.exports = {
   entry: {
     app: './src/main.js'
   },
+  externals: {
+    'vue': 'Vue',
+    'vue-router': 'VueRouter',
+    'web3': 'Web3',
+    'vue-clipboard2': 'VueClipboard',
+  },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',

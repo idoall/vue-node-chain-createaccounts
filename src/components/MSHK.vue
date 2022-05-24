@@ -1,6 +1,6 @@
 <template>
   <b-container>
-      <b-jumbotron header="在线生成链上钱包" lead="mshk.top" bg-variant="white">
+      <b-jumbotron header="在线生成链上钱包" lead="https://mshk.top" bg-variant="white" class="pt-1">
         <b-form-row>
           <div class="text-left">
               <b-col>
@@ -45,7 +45,7 @@
                   <b-button variant="primary" @click="doCopy(item.address)">复制</b-button>
                 </b-col>
               </b-form>
-              <b-form inline class="w-100 mt-1">
+              <b-form inline class="w-100 mt-1 mb-1">
                 <b-col cols="1" >
                   <label for="inline-form-input-name">私钥{{ index+1 }}</label>
                 </b-col>
@@ -72,6 +72,7 @@
 // import Vue from 'vue'
 // import { BButton } from 'bootstrap-vue'
 import Web3 from 'web3'
+import { BootstrapVue } from 'bootstrap-vue'
 export default {
   name: 'MSHK.TOP',
   data () {
@@ -123,6 +124,7 @@ export default {
     }
   },
   mounted () {
+    console.log(BootstrapVue.version)
   }
 }
 </script>
